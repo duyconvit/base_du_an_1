@@ -2,7 +2,24 @@
 
 class HomeController
 {
-    public function index() {
-        echo "Xưởng thực hành dự án 1";
+    public $modelSanPham;
+
+    public function __construct() {
+        $this -> modelSanPham = new Product();
+    }
+
+    public function home() {
+        echo "Trang Home";
+    }
+
+    public function trangchu() {
+        echo "Trang chủ";
+    }
+
+    public function danhSachSanPham() {
+        // echo "Danh sách sản phẩm";
+        $listProduct = $this->modelSanPham->getAllProduct();
+        // var_dump($listProduct);die();
+        require_once './views/listProduct.php';
     }
 }
