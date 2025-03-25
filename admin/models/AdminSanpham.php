@@ -31,8 +31,8 @@ class AdminSanPham{
             $stmt = $this->conn->prepare($sql);
             
             $stmt->execute([
-                ':ten_danh_muc' => $ten_danh_muc,
-                ':mo_ta' => $mo_ta
+                // ':ten_danh_muc' => $ten_danh_muc, //bsbabahshshd
+                // ':mo_ta' => $mo_ta
             ]);
 
             return true;
