@@ -31,8 +31,13 @@ class AdminSanPham{
             $stmt = $this->conn->prepare($sql);
             
             $stmt->execute([
+<<<<<<< HEAD
                 // ':ten_danh_muc' => $ten_danh_muc, //bsbabahshshd
                 // ':mo_ta' => $mo_ta
+=======
+                ':ten_danh_muc' => $ten_danh_muc, //bsbabahshshd
+                ':mo_ta' => $mo_ta
+>>>>>>> NhanhcuaDuy
             ]);
 
             return true;
