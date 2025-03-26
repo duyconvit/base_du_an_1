@@ -37,53 +37,53 @@
                   <div class="form-group col-12">
                     <label>Ten san pham</label>
                     <input type="text" class="form-control" name="ten_san_pham" placeholder="Nhap ten san pham">
-                    <?php if(isset($errors['ten_san_pham'])){ ?>
-                        <p class="text-danger"><?= $errors['ten_san_pham'] ?></p>
+                    <?php if(isset($_SESSION['errors']['ten_san_pham'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['ten_san_pham'] ?></p>
                    <?php } ?>
                   </div>
                 
                   <div class="form-group col-6">
                     <label>Gia san pham</label>
                     <input type="number" class="form-control" name="gia_san_pham" placeholder="Nhap gia san pham">
-                    <?php if(isset($errors['gia_san_pham'])){ ?>
-                        <p class="text-danger"><?= $errors['gia_san_pham'] ?></p>
+                    <?php if(isset($_SESSION['errors']['gia_san_pham'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['gia_san_pham'] ?></p>
                    <?php } ?>
                   </div>    
                   
                   <div class="form-group col-6">
                     <label>Gia khuyen mai</label>
                     <input type="number" class="form-control" name="gia_khuyen_mai" placeholder="Nhap gia khuyen mai san pham">
-                    <?php if(isset($errors['gia_khuyen_mai'])){ ?>
-                        <p class="text-danger"><?= $errors['gia_khuyen_mai'] ?></p>
+                    <?php if(isset($_SESSION['errors']['gia_khuyen_mai'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['gia_khuyen_mai'] ?></p>
                    <?php } ?>
                   </div>
                   
                   <div class="form-group col-6">
                     <label>Hinh anh</label>
                     <input type="file" class="form-control" name="hinh_anh">
-                    <?php if(isset($errors['hinh_anh'])){ ?>
-                        <p class="text-danger"><?= $errors['hinh_anh'] ?></p>
+                    <?php if(isset($_SESSION['errors']['hinh_anh'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['hinh_anh'] ?></p>
                    <?php } ?>
                   </div>  
                   
-                  <div class="form-group col-6">
+                  <!-- <div class="form-group col-6">
                     <label>Album Hinh anh</label>
                     <input type="file" class="form-control" name="img_array[] " multiple>
-                  </div> 
+                  </div>  -->
                   
                   <div class="form-group col-6">
                     <label>So luong</label>
                     <input type="number" class="form-control" name="so_luong" placeholder="Nhap So luong san pham">
-                    <?php if(isset($errors['so_luong'])){ ?>
-                        <p class="text-danger"><?= $errors['so_luong'] ?></p>
+                    <?php if(isset($_SESSION['errors']['so_luong'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['so_luong'] ?></p>
                    <?php } ?>
                   </div>
                   
                   <div class="form-group col-6">
                     <label>Ngay nhap</label>
                     <input type="date" class="form-control" name="ngay_nhap" placeholder="Nhap Ngay nhap">
-                    <?php if(isset($errors['ngay_nhap'])){ ?>
-                        <p class="text-danger"><?= $errors['ngay_nhap'] ?></p>
+                    <?php if(isset($_SESSION['errors']['ngay_nhap'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['ngay_nhap'] ?></p>
                    <?php } ?>
                   </div>    
                   
@@ -96,8 +96,8 @@
                         <option value="<?= $danhMuc['id'] ?>"><?=$danhMuc['ten_danh_muc'] ?></option>
                       <?php endforeach ?>  
                     </select>
-                    <?php if(isset($errors['danh_muc_id'])){ ?>
-                        <p class="text-danger"><?= $errors['danh_muc_id'] ?></p>
+                    <?php if(isset($_SESSION['errors']['danh_muc_id'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['danh_muc_id'] ?></p>
                    <?php } ?>
                   </div>
 
@@ -108,8 +108,8 @@
                       <option value="1">Còn hàng</option>
                       <option value="2">Hết hàng</option>
                     </select>
-                    <?php if(isset($errors['trang_thai'])){ ?>
-                        <p class="text-danger"><?= $errors['trang_thai'] ?></p>
+                    <?php if(isset($_SESSION['errors']['trang_thai'])){ ?>
+                        <p class="text-danger"><?= $_SESSION['errors']['trang_thai'] ?></p>
                    <?php } ?>
                   </div>
 
