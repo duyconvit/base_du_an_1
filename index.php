@@ -8,7 +8,7 @@ require_once './commons/function.php'; // Hàm hỗ trợ
 require_once './controllers/HomeController.php';
 
 // Require toàn bộ file Models
-require_once './models/Products.php';
+require_once './models/SanPham.php';
 
 // Route
 $act = $_GET['act'] ?? '/';
@@ -27,10 +27,10 @@ match ($act) {
     // Trang chủ
     '/' => (new HomeController())->home(),//truong hop dac biet
 
-    'trangchu' => (new HomeController())->trangchu(),
-    // BASE_URL/?act=trangchu
+    // 'trangchu' => (new HomeController())->trangchu(),
+    // // BASE_URL/?act=trangchu
     
-    'danhsachsanpham' => (new HomeController())->danhSachSanPham(),
-    // BASE_URL/?act=danhsachsanpham
-
+    // 'danhsachsanpham' => (new HomeController())->danhSachSanPham(),
+    // // BASE_URL/?act=danhsachsanpham
+    'chi-tiet-san-pham' => (new HomeController())->chiTietSanPham(),
 }; 

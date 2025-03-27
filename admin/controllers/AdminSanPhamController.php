@@ -41,13 +41,12 @@ class AdminSanPhamController{
             $danh_muc_id = $_POST['danh_muc_id'] ??'';
             $trang_thai = $_POST['trang_thai'] ?? '';
             $mo_ta = $_POST['mo_ta'] ?? '';
-            
             $hinh_anh = $_FILES['hinh_anh'] ?? null;
             //luu hinh anh vao thu muc
             $file_thumb = uploadFile($hinh_anh, './uploads/');
 
             //mang hinh anh
-            // $img_array = $_FILES['img_array'];
+            $img_array = $_FILES['img_array'];
 
 
             //tao 1 mang trong de chua du lieu
@@ -74,8 +73,9 @@ class AdminSanPhamController{
             if(empty($trang_thai)){
                 $errors['trang_thai'] = "Trang thai phai chon";
             }
-            if($hinh_anh['errors']){
-                $errors['hinh_anh'] = "Hinh anh phai chon";
+            if($hinh_anh['errors'] !==0) {
+                $error['hinh_anh'] = 'Vui Lòng Chọn Ảnh Sản Phẩm !';
+            } 
             }
 
             $_SESSION['errors'] = $errors;
@@ -95,7 +95,7 @@ class AdminSanPhamController{
             }
 
         }
-    }
+
 
     public function formEditSanPham(){
         // ham nay dung hien thi form nhap
@@ -134,11 +134,7 @@ class AdminSanPhamController{
             $trang_thai = $_POST['trang_thai'] ?? '';
             $mo_ta = $_POST['mo_ta'] ?? '';
             
-            $hinh_anh = $_FILES['hinh_anh'] ?? null;
-     
-
-
-
+            $hinh_anh = $_FILES['hinh_anh'] ?? null;    
 
             //tao 1 mang trong de chua du lieu
             $errors =[];
@@ -171,9 +167,9 @@ class AdminSanPhamController{
             $_SESSION['errors'] = $errors;
 
             // logic sua anh
-            if(empty($errors) && $hinh_anh['errors']== UPLOAD_ERR_OK){
+            if(isset($hinh_anh) && $hinh_anh['errors']== UPLOAD_ERR_OK){
                 //upload anh moi len
-                $new_file = uploadFile($hinh_anh, './upload/');
+                $new_file = uploadFile($hinh_anh, './uploads/');
 
                 if(!empty($old_file)){ // neu co anh cu thi xoa anh cu
                     deleteFile($old_file);
@@ -215,3 +211,5 @@ class AdminSanPhamController{
         
     }
 }
+
+?>

@@ -52,8 +52,8 @@
                     <td><?= $key +1 ?></td>
                     <td><?= $sanPham['ten_san_pham'] ?></td>
                     <td>
-                      <img src="<?= BASE_URL .'./upload/'. $sanPham['hinh_anh'] ?>" style="width: 100px" alt=""
-                      onerror="this.onerror=null;this.src= 'https://picsum.photos/200'";
+                      <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" style="width: 100px" alt=""
+                      onerror="this.onerror=null;this.src= ''";
                       >
                     </td>
                     <td><?= $sanPham['gia_san_pham'] ?></td>
