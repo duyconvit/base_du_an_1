@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once 'controller.php';
+// require_once './controllers/loginController.php';
 ?>
 
-<!DOCTY<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
