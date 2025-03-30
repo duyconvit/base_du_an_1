@@ -103,6 +103,8 @@ class AdminSanPhamController{
         $id =  $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
         $listDanhMuc = $this-> modelDanhMuc ->getAllDanhMuc();
+        $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
+
         if ($sanPham) {
             require_once "./views/sanpham/editSanPham.php";
             deleteSessionError();

@@ -70,6 +70,19 @@ class AdminSanPham
             echo "Loi" . $e->getMessage();
         }
     }
+    public function getListAnhSanPham($id){
+        try {
+            $sql = 'SELECT * FROM hinh_anh_san_phams WHERE san_pham_id = :id';
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute([':id'=>$id]);
+
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo "lỗi" . $e->getMessage();
+        }
+    }
 
     public function updateSanPham($san_pham_id, $ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $ngay_nhap, $danh_muc_id, $trang_thai, $mo_ta, $hinh_anh)
     {

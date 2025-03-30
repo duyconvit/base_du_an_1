@@ -34,10 +34,24 @@ class SanPham
                     WHERE san_phams.id = :id';
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([':id' => $id]);
-            return $stmt->fetch(PDO::FETCH_ASSOC); // Trả về chi tiết sản phẩm
+            return $stmt->fetch(); // Trả về chi tiết sản phẩm
         } catch (Exception $e) {
             echo "Lỗi truy vấn: " . $e->getMessage();
-            return null; // Trả về null nếu có lỗi
+             // Trả về null nếu có lỗi
+        }
+    }
+
+    public function getListAnhSanPham($id){
+        try {
+            $sql = 'SELECT * FROM hinh_anh_san_phams WHERE san_pham_id = :id';
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute([':id'=>$id]);
+
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo "lỗi" . $e->getMessage();
         }
     }
 

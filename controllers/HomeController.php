@@ -17,7 +17,7 @@ class HomeController
     {
         $id = $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
-        // $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
+        $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
         $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamDanhMuc($sanPham['danh_muc_id']);
         // var_dump($listSanPhamCungDanhMuc);die;
         if ($sanPham) {
