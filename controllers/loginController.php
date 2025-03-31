@@ -1,6 +1,7 @@
 <?php
 
-require_once './commons/env.php';
+require_once __DIR__ . '/../commons/connect.php';
+
 
 // Hàm kiểm tra đăng nhập
 function login($username, $password, $conn) {
@@ -34,13 +35,14 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $loginResult = login($username, $password, $conn);
+    // $loginResult = login($username, $password, $conn);
+    $loginResult = login($username, $password,$conn);
 
     if ($loginResult === true) {
         if ($_SESSION['role'] === '1') {
-            header("Location: ./views/home.php  "); // Chuyển hướng đến trang quản trị
+            header("Location: http://localhost/base_du_an_1/admin/?act=danh-muc  "); // Chuyển hướng đến trang quản trị
         } else {    
-            header("Location: user.php");  // Chuyển hướng đến trang người dùng
+            header("Location:http://localhost/base_du_an_1/");  // Chuyển hướng đến trang người dùng
         }
         exit();
     } else {
@@ -59,5 +61,9 @@ if (isset($_POST['logout'])) {
 }
 
 
-$conn->close();
+// $conn->close();
+
+
+
+
 ?>

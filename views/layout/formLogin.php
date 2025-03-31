@@ -1,6 +1,7 @@
 <?php
 session_start();
-// require_once './controllers/loginController.php';
+require_once __DIR__ . '/../../controllers/loginController.php';
+
 ?>
 
 <!DOCTYPE html>
