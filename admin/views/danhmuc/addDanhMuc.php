@@ -27,23 +27,23 @@
         <div class="col-12">
         <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Them danh muc</h3>
+                <h3 class="card-title">Thêm danh mục</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form action="<?= BASE_URL_ADMIN . '?act=them-danh-muc'?>" method="POST">
                 <div class="card-body">
                   <div class="form-group">
-                    <label>Ten danh muc</label>
-                    <input type="text" class="form-control" name="ten_danh_muc" placeholder="Nhap ten danh muc">
+                    <label>Tên danh mục</label>
+                    <input type="text" class="form-control" name="ten_danh_muc" placeholder="Nhập tên danh mục">
                     <?php if(isset($errors['ten_danh_muc'])){ ?>
                         <p class="text-danger"><?= $errors['ten_danh_muc'] ?></p>
                    <?php } ?>
                   </div>
                 
                   <div class="form-group">
-                    <label>Mo ta</label>
-                    <textarea name="mo_ta" id="" class="form-control" placeholder="Nhap mo ta"></textarea>
+                    <label>Mô tả</label>
+                    <textarea name="mo_ta" id="" class="form-control" placeholder="Nhập mô tả"></textarea>
                   </div>
 
                 </div>

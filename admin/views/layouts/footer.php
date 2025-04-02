@@ -1,8 +1,8 @@
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      By <b>Du an Nhom ???</b>
+      By <b>Dự án nhóm 8</b>
     </div>
-    <strong>Website Dien Thoai</strong> 
+    <strong>shopDunk.</strong> 
   </footer>
 
   <!-- Control Sidebar -->

@@ -15,7 +15,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Sua Sản Phẩm: <?= $sanPham['ten_san_pham'] ?></h1>
+          <h1>Sửa Sản Phẩm: <?= $sanPham['ten_san_pham'] ?></h1>
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -28,7 +28,7 @@
       <div class="col-md-12">
         <div class="card card-primary">
           <div class="card-header">
-            <h3 class="card-title">Thong tin san pham</h3>
+            <h3 class="card-title">Thông tin sản phẩm</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -40,7 +40,7 @@
             <div class="card-body">
               <div class="form-group">
                 <input type="hidden" name="san_pham_id" value="<?= $sanPham['id'] ?>">
-                <label for="ten_san_pham">Ten san pham</label>
+                <label for="ten_san_pham">Tên sản phẩm</label>
                 <input type="text" id="ten_san_pham" class="form-control" value="<?= $sanPham['ten_san_pham'] ?>" name="ten_san_pham">
                 <?php if (isset($_SESSION['errors']['ten_san_pham'])) { ?>
                   <p class="text-danger"><?= $_SESSION['errors']['ten_san_pham'] ?></p>
@@ -48,7 +48,7 @@
               </div>
 
               <div class="form-group">
-                <label for="gia_san_pham">Gia san pham</label>
+                <label for="gia_san_pham">Giá sản phẩm</label>
                 <input type="number" id="gia_san_pham" class="form-control" value="<?= $sanPham['gia_san_pham'] ?>" name="gia_san_pham">
                 <?php if (isset($_SESSION['errors']['gia_san_pham'])) { ?>
                   <p class="text-danger"><?= $_SESSION['errors']['gia_san_pham'] ?></p>
@@ -56,7 +56,7 @@
               </div>
 
               <div class="form-group">
-                <label for="gia_khuyen_mai">Gia khuyen mai</label>
+                <label for="gia_khuyen_mai">Giá khuyến mãi</label>
                 <input type="number" id="gia_khuyen_mai" class="form-control" value="<?= $sanPham['gia_khuyen_mai'] ?>" name="gia_khuyen_mai">
                 <?php if (isset($_SESSION['errors']['gia_khuyen_mai'])) { ?>
                   <p class="text-danger"><?= $_SESSION['errors']['gia_khuyen_mai'] ?></p>
@@ -64,12 +64,12 @@
               </div>
 
               <div class="form-group">
-                <label for="hinh_anh">Hinh anh</label>
+                <label for="hinh_anh">Hình ảnh</label>
                 <input type="file" id="hinh_anh" class="form-control" name="hinh_anh">
               </div>
 
               <div class="form-group">
-                <label for="so_luong">So luong</label>
+                <label for="so_luong">Số lượng</label>
                 <input type="number" id="so_luong" class="form-control" value="<?= $sanPham['so_luong'] ?>" name="so_luong">
                 <?php if (isset($_SESSION['errors']['so_luong'])) { ?>
                   <p class="text-danger"><?= $_SESSION['errors']['so_luong'] ?></p>
@@ -77,7 +77,7 @@
               </div>
 
               <div class="form-group">
-                <label for="ngay_nhap">Ngay nhap</label>
+                <label for="ngay_nhap">Ngày nhập</label>
                 <input type="date" id="ngay_nhap" class="form-control" value="<?= $sanPham['ngay_nhap'] ?>" name="ngay_nhap">
                 <?php if (isset($_SESSION['errors']['ngay_nhap'])) { ?>
                   <p class="text-danger"><?= $_SESSION['errors']['ngay_nhap'] ?></p>
@@ -85,7 +85,7 @@
               </div>
 
               <div class="form-group">
-                <label for="inputStatus">Danh muc san pham</label>
+                <label for="inputStatus">Danh mục sản phẩm</label>
                 <select id="inputStatus" name="danh_muc_id" class="form-control custom-select">
                   <?php foreach ($listDanhMuc as $danhMuc): ?>
                     <option <?= $danhMuc['id'] == $sanPham['danh_muc_id'] ? 'selected' : '' ?> value="<?= $danhMuc['id'] ?>"><?= $danhMuc['ten_danh_muc'] ?></option>
@@ -109,7 +109,7 @@
 
 
               <div class="form-group">
-                <label for="mo_ta">Mo ta</label>
+                <label for="mo_ta">Mô tả</label>
                 <textarea id="mo_ta" name="mo_ta" class="form-control" rows="4"><?= $sanPham['mo_ta'] ?></textarea>
                 <?php if (isset($_SESSION['errors']['mo_ta'])) { ?>
                   <p class="text-danger"><?= $_SESSION['errors']['mo_ta'] ?></p>

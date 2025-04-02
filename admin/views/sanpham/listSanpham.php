@@ -14,7 +14,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Quản Lý Danh Sach Sản Phẩm</h1>
+          <h1>Quản Lý Danh Sách Sản Phẩm</h1>
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -28,7 +28,7 @@
           <div class="card">
             <div class="card-header">
               <a href="<?= BASE_URL_ADMIN . '?act=form-them-san-pham'?>">
-                <button class="btn btn-success">Add san pham</button>
+                <button class="btn btn-success">Thêm sản phẩm</button>
               </a>
             </div>
             <!-- /.card-header -->
@@ -37,13 +37,13 @@
                 <thead>
                   <tr>
                     <th>STT</th>
-                    <th>Ten san pham</th>
-                    <th>Anh san pham</th>
-                    <th>Gia tien</th>
-                    <th>So luong</th>
-                    <th>Danh muc san pham</th>
-                    <th>Trang thai</th>
-                    <th>Thao tac</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Giá tiền</th>
+                    <th>Số lượng</th>
+                    <th>Danh mục sản phẩm</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -59,14 +59,14 @@
                     <td><?= $sanPham['gia_san_pham'] ?></td>
                     <td><?= $sanPham['so_luong'] ?></td>
                     <td><?= $sanPham['ten_danh_muc'] ?></td>
-                    <td><?= $sanPham['trang_thai'] == 1 ? 'Con hang': 'Het hang'; ?></td>
+                    <td><?= $sanPham['trang_thai'] == 1 ? 'Còn hàng': 'Hết hàng'; ?></td>
                     <td>
                       <a href="<?= BASE_URL_ADMIN . '?act=form-sua-san-pham&id_san_pham=' . $sanPham['id']?>">
-                        <button class="btn btn-warning">Sua</button>
+                        <button class="btn btn-warning">Edit</button>
                       </a>
                       <a href="<?= BASE_URL_ADMIN . '?act=xoa-san-pham&id_san_pham=' . $sanPham['id']?>"
-                       onclick="return confirm('Ban co muon xoa khong ?')">
-                        <button class="btn btn-danger">Xoa</button>
+                       onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">
+                        <button class="btn btn-danger">Delete</button>
                       </a>
                     </td>
                   </tr>
@@ -75,13 +75,13 @@
                 <tfoot>
                   <tr>
                     <th>STT</th>
-                    <th>Ten san pham</th>
-                    <th>Anh san pham</th>
-                    <th>Gia tien</th>
-                    <th>So luong</th>
-                    <th>Danh muc san pham</th>
-                    <th>Trang thai</th>
-                    <th>Thao tac</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Ảnh sản phẩm</th>
+                    <th>Giá tiền</th>
+                    <th>Số lượng</th>
+                    <th>Danh mục sản phẩm</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
                 </tfoot>
               </table>
             </div>

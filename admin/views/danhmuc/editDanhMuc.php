@@ -27,7 +27,7 @@
         <div class="col-12">
         <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Sua danh muc</h3>
+                <h3 class="card-title">Sửa danh mục</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -38,16 +38,16 @@
 
                 <div class="card-body">
                   <div class="form-group">
-                    <label>Ten danh muc</label>
-                    <input type="text" class="form-control" name="ten_danh_muc" value="<?= $danhMuc['ten_danh_muc'] ?>" placeholder="Nhap ten danh muc">
+                    <label>Tên danh mục</label>
+                    <input type="text" class="form-control" name="ten_danh_muc" value="<?= $danhMuc['ten_danh_muc'] ?>" placeholder="Nhập tên danh mục">
                     <?php if(isset($errors['ten_danh_muc'])){ ?>
                         <p class="text-danger"><?= $errors['ten_danh_muc'] ?></p>
                    <?php } ?>
                   </div>
                 
                   <div class="form-group">
-                    <label>Mo ta</label>
-                    <textarea name="mo_ta" id="" class="form-control" placeholder="Nhap mo ta"><?= $danhMuc['mo_ta'] ?></textarea>
+                    <label>Mô tả</label>
+                    <textarea name="mo_ta" id="" class="form-control" placeholder="Nhập mô tả"><?= $danhMuc['mo_ta'] ?></textarea>
                   </div>
 
                 </div>

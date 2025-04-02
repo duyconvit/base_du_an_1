@@ -177,7 +177,7 @@
                                                     if ($tinhNgay->days <= 7) {
                                                     ?>
                                                         <div class="product-label new">
-                                                            <span>new</span>
+                                                            <span>New</span>
                                                         </div>
                                                     <?php
                                                     }
@@ -188,7 +188,7 @@
                                                     if ($sanPham['gia_khuyen_mai']) {
                                                     ?>
                                                         <div class="product-label discount">
-                                                            <span>SALE</span>
+                                                            <span>Sale</span>
                                                         </div>
                                                     <?php
                                                     }
@@ -362,7 +362,7 @@
                                                     if ($tinhNgay->days <= 7) {
                                                     ?>
                                                         <div class="product-label new">
-                                                            <span>new</span>
+                                                            <span>New</span>
                                                         </div>
                                                     <?php
                                                     }
@@ -373,7 +373,7 @@
                                                     if ($sanPham['gia_khuyen_mai']) {
                                                     ?>
                                                         <div class="product-label discount">
-                                                            <span>SALE</span>
+                                                            <span>Sale</span>
                                                         </div>
                                                     <?php
                                                     }

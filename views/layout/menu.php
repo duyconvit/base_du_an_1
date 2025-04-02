@@ -138,7 +138,5 @@
                         </form>
                     </div>
                     <!-- search box end -->
-
-
     </header>
     <!-- end Header Area -->

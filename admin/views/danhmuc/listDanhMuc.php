@@ -28,7 +28,7 @@
           <div class="card">
             <div class="card-header">
               <a href="<?= BASE_URL_ADMIN . '?act=form-them-danh-muc'?>">
-                <button class="btn btn-success">Add danh muc</button>
+                <button class="btn btn-success">Thêm danh mục</button>
               </a>
             </div>
             <!-- /.card-header -->
@@ -37,9 +37,9 @@
                 <thead>
                   <tr>
                     <th>STT</th>
-                    <th>Ten danh muc</th>
-                    <th>Mo ta</th>
-                    <th>Thao tac</th>
+                    <th>Tên danh mục</th>
+                    <th>Mô tả</th>
+                    <th>Thao tác</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -50,11 +50,11 @@
                     <td><?= $danhMuc['mo_ta'] ?></td>
                     <td>
                       <a href="<?= BASE_URL_ADMIN . '?act=form-sua-danh-muc&id_danh_muc=' . $danhMuc['id']?>">
-                        <button class="btn btn-warning">Sua</button>
+                        <button class="btn btn-warning">Edit</button>
                       </a>
                       <a href="<?= BASE_URL_ADMIN . '?act=xoa-danh-muc&id_danh_muc=' . $danhMuc['id']?>"
                        onclick="return confirm('Ban co muon xoa khong ?')">
-                        <button class="btn btn-danger">Xoa</button>
+                        <button class="btn btn-danger">Delete</button>
                       </a>
                     </td>
                   </tr>
@@ -63,9 +63,9 @@
                 <tfoot>
                   <tr>
                     <th>STT</th>
-                    <th>Ten danh muc</th>
-                    <th>Mo ta</th>
-                    <th>Thao tac</th>
+                    <th>Tên danh mục</th>
+                    <th>Mô tả</th>
+                    <th>Thao tác</th>
                 </tfoot>
               </table>
             </div>

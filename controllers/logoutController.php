@@ -11,7 +11,7 @@ require_once 'controller.php';
 <body>
    <form action="" method="post">
    
-    <button onclick="alert('đăng xuat thanh cong')" type="submit" name="logout">đăng xuất</button>
+    <button onclick="alert('đăng xuat thanh cong')" type="submit" name="logout">Đăng xuất</button>
    </form>
 </body>
 </html>

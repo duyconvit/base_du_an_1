@@ -27,7 +27,7 @@
             <a href="../widgets.html" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                  Dashboard
+                  Thống kê
               </p>
             </a>
           </li>
@@ -36,7 +36,7 @@
             <a href="<?= BASE_URL_ADMIN . '?act=danh-muc'?>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Danh muc san pham
+                Danh mục sản phẩm
               </p>
             </a>
           </li>
@@ -45,7 +45,7 @@
             <a href="<?= BASE_URL_ADMIN . '?act=san-pham'?>" class="nav-link">
             <i class="nav-icon fas fa-mobile-alt"></i>
               <p>
-                San pham
+                Sản phẩm
               </p>
             </a>
           </li>
