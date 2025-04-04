@@ -39,11 +39,14 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="product-large-slider">
-
-
-                                    <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product" />
-
-
+                                    <?php foreach ($listSanPham as $key => $sanPham): ?>
+                                        <div class="pro-large-img img-zoom">
+                                            <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id']; ?>">
+                                                <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
+                                                <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
+                                            </a>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
                                 <!-- <div class="pro-nav slick-row-10 slick-arrow-style">
                                         <div class="pro-nav-thumb">
@@ -103,6 +106,24 @@
                                             <option>1T</option>
                                         </select>
                                     </div>
+                                    <div class="color-option">
+                                        <h6 class="option-title">color :</h6>
+                                        <ul class="color-categories">
+                                            <li>
+                                                <a class="c-lightblue" href="#" title="LightSteelblue"></a>
+                                            </li>
+                                            <li>
+                                                <a class="c-darktan" href="#" title="Darktan"></a>
+                                            </li>
+                                            <li>
+                                                <a class="c-grey" href="#" title="Grey"></a>
+                                            </li>
+                                            <li>
+                                                <a class="c-brown" href="#" title="Brown"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -152,7 +173,7 @@
                                         if ($tinhNgay->days <= 7) {
                                         ?>
                                             <div class="product-label new">
-                                                <span>New</span>
+                                                <span>new</span>
                                             </div>
                                         <?php
                                         }
@@ -163,7 +184,7 @@
                                         if ($sanPham['gia_khuyen_mai']) {
                                         ?>
                                             <div class="product-label discount">
-                                                <span>Sale</span>
+                                                <span>SALE</span>
                                             </div>
                                         <?php
                                         }

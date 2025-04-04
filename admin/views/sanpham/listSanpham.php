@@ -1,11 +1,11 @@
-<!-- header -->
-<?php include './views/layouts/header.php'; ?>
+<!-- header  -->
+<?php require './views/layout/header.php'; ?>
 <!-- Navbar -->
-<?php include './views/layouts/navbar.php'; ?>
+<?php include './views/layout/navbar.php'; ?>
 <!-- /.navbar -->
-<!-- Main Sidebar Container -->
-<?php include './views/layouts/sidebar.php'; ?>
 
+<!-- Main Sidebar Container -->
+<?php include './views/layout/sidebar.php'; ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -14,7 +14,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Quản Lý Danh Sách Sản Phẩm</h1>
+          <h1>Quản lý danh sách sản phẩm</h1>
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -27,8 +27,8 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <a href="<?= BASE_URL_ADMIN . '?act=form-them-san-pham'?>">
-                <button class="btn btn-success">Thêm sản phẩm</button>
+              <a href="<?= BASE_URL_ADMIN . '?act=form-them-san-pham' ?>">
+                <button class="btn btn-success">Thêm sản phẩm mới</button>
               </a>
             </div>
             <!-- /.card-header -->
@@ -41,36 +41,42 @@
                     <th>Ảnh sản phẩm</th>
                     <th>Giá tiền</th>
                     <th>Số lượng</th>
-                    <th>Danh mục sản phẩm</th>
+                    <th>Danh mục</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($listSanPham as $key => $sanPham): ?>
-                  <tr>
-                    <td><?= $key +1 ?></td>
-                    <td><?= $sanPham['ten_san_pham'] ?></td>
-                    <td>
-                      <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" style="width: 100px" alt=""
-                      onerror="this.onerror=null;this.src= ''";
-                      >
-                    </td>
-                    <td><?= $sanPham['gia_san_pham'] ?></td>
-                    <td><?= $sanPham['so_luong'] ?></td>
-                    <td><?= $sanPham['ten_danh_muc'] ?></td>
-                    <td><?= $sanPham['trang_thai'] == 1 ? 'Còn hàng': 'Hết hàng'; ?></td>
-                    <td>
-                      <a href="<?= BASE_URL_ADMIN . '?act=form-sua-san-pham&id_san_pham=' . $sanPham['id']?>">
-                        <button class="btn btn-warning">Edit</button>
-                      </a>
-                      <a href="<?= BASE_URL_ADMIN . '?act=xoa-san-pham&id_san_pham=' . $sanPham['id']?>"
-                       onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">
-                        <button class="btn btn-danger">Delete</button>
-                      </a>
-                    </td>
-                  </tr>
-                  <?php endforeach; ?>
+                  <?php foreach ($listSanPham as $key => $sanPham) : ?>
+                    <tr>
+                      <td><?= $key + 1 ?></td>
+                      <td><?= $sanPham['ten_san_pham'] ?></td>
+                      <td>
+                        <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" style="width: 100px" alt=""
+                        onerror="this.onerror=null; this.src='https://cutepetshop.vn/wp-content/uploads/2023/05/11-buc-hinh-nen-thu-cung-dang-yeu-3.jpg'"
+                        >
+                      </td>
+                      <td><?= $sanPham['gia_san_pham'] ?></td>
+                      <td><?= $sanPham['so_luong'] ?></td>
+                      <td><?= $sanPham['ten_danh_muc'] ?></td>
+                      <td><?= $sanPham['trang_thai'] == 1 ? 'Còn bán':'Dừng bán'; ?></td>
+                      <td>
+                        <div class="btn-group">
+                          <a href="<?= BASE_URL_ADMIN . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
+                            <button class="btn btn-primary"><i class="far fa-eye"></i></button>
+                          </a>
+                          <a href="<?= BASE_URL_ADMIN . '?act=form-sua-san-pham&id_san_pham=' . $sanPham['id'] ?>">
+                            <button class="btn btn-warning"><i class="fas fa-cogs"></i></button>
+                          </a>
+                          <a href="<?= BASE_URL_ADMIN . '?act=xoa-san-pham&id_san_pham=' . $sanPham['id'] ?>" 
+                            onclick="return confirm('Bạn có đồng ý xóa hay không?')">
+                            <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                          </a>
+                        </div>
+                        
+                      </td>
+                    </tr>
+                  <?php endforeach ?>
                 </tbody>
                 <tfoot>
                   <tr>
@@ -79,9 +85,10 @@
                     <th>Ảnh sản phẩm</th>
                     <th>Giá tiền</th>
                     <th>Số lượng</th>
-                    <th>Danh mục sản phẩm</th>
+                    <th>Danh mục</th>
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
+                  </tr>
                 </tfoot>
               </table>
             </div>
@@ -99,9 +106,9 @@
 </div>
 <!-- /.content-wrapper -->
 
-<!-- Footer -->
-<?php include './views/layouts/footer.php'; ?>
-<!-- EndFooter -->
+<!-- Footer  -->
+<?php include './views/layout/footer.php'; ?>
+<!-- End footer  -->
 
 <!-- Page specific script -->
 <script>

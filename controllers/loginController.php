@@ -40,9 +40,9 @@ if (isset($_POST['login'])) {
 
     if ($loginResult === true) {
         if ($_SESSION['role'] === '1') {
-            header("Location: http://localhost/base_du_an_1/admin/?act=danh-muc  "); // Chuyển hướng đến trang quản trị
+            header("Location: http://localhost/X/base_du_an_1/admin/?act=danh-muc  "); // Chuyển hướng đến trang quản trị
         } else {    
-            header("Location:http://localhost/base_du_an_1/");  // Chuyển hướng đến trang người dùng
+            header("Location:http://localhost/X/base_du_an_1/");  // Chuyển hướng đến trang người dùng
         }
         exit();
     } else {

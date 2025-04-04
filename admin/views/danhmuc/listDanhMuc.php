@@ -1,11 +1,11 @@
-<!-- header -->
-<?php include './views/layouts/header.php'; ?>
+<!-- header  -->
+<?php require './views/layout/header.php'; ?>
 <!-- Navbar -->
-<?php include './views/layouts/navbar.php'; ?>
+<?php include './views/layout/navbar.php'; ?>
 <!-- /.navbar -->
-<!-- Main Sidebar Container -->
-<?php include './views/layouts/sidebar.php'; ?>
 
+<!-- Main Sidebar Container -->
+<?php include './views/layout/sidebar.php'; ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -14,7 +14,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Quản Lý Danh Mục Sản Phẩm</h1>
+          <h1>Quản lý danh mục sản phẩm</h1>
         </div>
       </div>
     </div><!-- /.container-fluid -->
@@ -27,7 +27,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <a href="<?= BASE_URL_ADMIN . '?act=form-them-danh-muc'?>">
+              <a href="<?= BASE_URL_ADMIN . '?act=form-them-danh-muc' ?>">
                 <button class="btn btn-success">Thêm danh mục</button>
               </a>
             </div>
@@ -43,22 +43,22 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($listDanhMuc as $key => $danhMuc): ?>
-                  <tr>
-                    <td><?= $key +1 ?></td>
-                    <td><?= $danhMuc['ten_danh_muc'] ?></td>
-                    <td><?= $danhMuc['mo_ta'] ?></td>
-                    <td>
-                      <a href="<?= BASE_URL_ADMIN . '?act=form-sua-danh-muc&id_danh_muc=' . $danhMuc['id']?>">
-                        <button class="btn btn-warning">Edit</button>
-                      </a>
-                      <a href="<?= BASE_URL_ADMIN . '?act=xoa-danh-muc&id_danh_muc=' . $danhMuc['id']?>"
-                       onclick="return confirm('Ban co muon xoa khong ?')">
-                        <button class="btn btn-danger">Delete</button>
-                      </a>
-                    </td>
-                  </tr>
-                  <?php endforeach; ?>
+                  <?php foreach ($listDanhMuc as $key => $danhMuc) : ?>
+                    <tr>
+                      <td><?= $key + 1 ?></td>
+                      <td><?= $danhMuc['ten_danh_muc'] ?></td>
+                      <td><?= $danhMuc['mo_ta'] ?></td>
+                      <td>
+                        <a href="<?= BASE_URL_ADMIN . '?act=form-sua-danh-muc&id_danh_muc=' . $danhMuc['id'] ?>">
+                          <button class="btn btn-warning">Sửa</button>
+                        </a>
+                        <a href="<?= BASE_URL_ADMIN . '?act=xoa-danh-muc&id_danh_muc=' . $danhMuc['id'] ?>" 
+                          onclick="return confirm('Bạn có đồng ý xóa hay không?')">
+                          <button class="btn btn-danger">Xóa</button>
+                        </a>
+                      </td>
+                    </tr>
+                  <?php endforeach ?>
                 </tbody>
                 <tfoot>
                   <tr>
@@ -66,6 +66,7 @@
                     <th>Tên danh mục</th>
                     <th>Mô tả</th>
                     <th>Thao tác</th>
+                  </tr>
                 </tfoot>
               </table>
             </div>
@@ -83,9 +84,9 @@
 </div>
 <!-- /.content-wrapper -->
 
-<!-- Footer -->
-<?php include './views/layouts/footer.php'; ?>
-<!-- EndFooter -->
+<!-- Footer  -->
+<?php include './views/layout/footer.php'; ?>
+<!-- End footer  -->
 
 <!-- Page specific script -->
 <script>
@@ -108,7 +109,7 @@
   });
 </script>
 <!-- Code injected by live-server -->
- 
+
 </body>
 
 </html>

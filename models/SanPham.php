@@ -71,13 +71,6 @@ class SanPham
             echo "Loi roi" . $e->getMessage();
         }
     }
-    public function searchSanPhamByName($keyword)
-    {
-        $sql = "SELECT * FROM san_phams WHERE ten_san_pham LIKE :keyword";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute(['keyword' => "%$keyword%"]);
-        return $stmt->fetchAll();
-    }
 }
 
 ?>

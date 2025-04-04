@@ -1,5 +1,6 @@
 ### Cấu trúc thư mục
 
+
 1. commons // File dùng chung cả dự án
 2. uploads // Folder lưu trữ file upload
 
@@ -10,3 +11,4 @@
 
 
 - Cấu hình DB trong file commons/env.php
+
