@@ -1,5 +1,11 @@
 <?php
-include('model/connect.php');
+require_once __DIR__ . '/../commons/connect.php';
+require_once __DIR__ . '/../views/layout/formdangkyuser.php';
+
+
+
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lấy dữ liệu từ form đăng ký
@@ -41,7 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("ssssss", $username, $password, $sdt, $email, $dia_chi, $role);
             if ($stmt->execute()) {
 
-                header("Location: trang.php");
+                header("Location: /base_du_an_1/views/layout/formLogin.php");
+                exit();
             } else {
                 echo "Lỗi khi đăng ký!";
             }
@@ -50,3 +57,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 }
 ?>
+

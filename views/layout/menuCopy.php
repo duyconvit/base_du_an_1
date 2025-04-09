@@ -62,10 +62,9 @@
                                               <i class="pe-7s-user"></i>
                                           </a>
                                           <ul class="dropdown-list">
-                                              <!-- <li><a href="http://localhost/base_du_an_1/views/layout/formLogin.php"> Đăng nhập </a></li>
-                                              <li><a href="http://localhost/base_du_an_1/controllers/dangky.php ">Đăng ký</a></li> -->
+                                              <li><a href="http://localhost/base_du_an_1/views/layout/formLogin.php"> Đăng nhập </a></li>
+                                              <li><a href="http://localhost/base_du_an_1/controllers/dangky.php ">Đăng ký</a></li>
                                               <li><a href="my-account.html">Tài Khoản</a></li>
-                                              <li><a href="my-account.html">Đăng Xuất</a></li>
                                           </ul>
                                       </li>
                                       <li>

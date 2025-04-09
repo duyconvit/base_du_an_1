@@ -30,7 +30,7 @@ class HomeController
         $listSanPhamCungDanhMuc = $this->modelSanPham->getListSanPhamDanhMuc($sanPham['danh_muc_id']);
         // var_dump($listSanPhamCungDanhMuc);die;
         if ($sanPham) {
-            require_once('./views/detailSanPham.php');
+            require_once('./views/layout/detailSanPham.php');
         } else {
             header('Location:' . BASE_URL);
             exit();

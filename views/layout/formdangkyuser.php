@@ -1,5 +1,5 @@
 <?php
-require_once 'dangky.php';
+//  
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +46,8 @@ require_once 'dangky.php';
                 <div class="mb-3">
                     <label for="role" class="form-label">Vai trò:</label>
                     <select id="role" name="role" class="form-select">
-                        
-                        <option value="admin">admin</option>
+                        <option value="user">user</option>
+                        <!-- <option value="admin">admin</option> -->
                     </select>
                 </div>
 

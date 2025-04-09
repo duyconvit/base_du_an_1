@@ -1,5 +1,5 @@
-<?php require_once 'layout/header.php'; ?>
-<?php require_once 'layout/menu.php'; ?>
+<?php require_once 'views/layout/header.php'; ?>
+<?php require_once 'views/layout/menu.php'; ?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -277,4 +277,4 @@
         </div>
     </div>
 </div>
-<?php require_once 'layout/footer.php'; ?>
+<?php require_once 'views/layout/footer.php'; ?>
