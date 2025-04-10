@@ -1,36 +1,57 @@
-<?php 
+<?php
+// Bắt đầu session
+session_start();
+?>
 
-// Require file Common
-require_once './commons/env.php'; // Khai báo biến môi trường
-require_once './commons/function.php'; // Hàm hỗ trợ
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-// Require toàn bộ file Controllers
-require_once './controllers/HomeController.php';
+<h2>Sản phẩm</h2>
 
-// Require toàn bộ file Models
-require_once './models/Products.php';
+<div class="product-list">
+    <div class="product">
+        <span>Sản phẩm A</span>
+        <form action="cart.php" method="POST">
+            <input type="hidden" name="product_id" value="1">
+            <input type="hidden" name="product_name" value="Sản phẩm A">
+            <input type="hidden" name="product_price" value="100000">
+            <label for="quantity">Số lượng:</label>
+            <input type="number" name="quantity" value="1" min="1" required>
+            <button type="submit" name="add_to_cart">Thêm vào giỏ</button>
+        </form>
+    </div>
+    <div class="product">
+        <span>Sản phẩm B</span>
+        <form action="cart.php" method="POST">
+            <input type="hidden" name="product_id" value="2">
+            <input type="hidden" name="product_name" value="Sản phẩm B">
+            <input type="hidden" name="product_price" value="200000">
+            <label for="quantity">Số lượng:</label>
+            <input type="number" name="quantity" value="1" min="1" required>
+            <button type="submit" name="add_to_cart">Thêm vào giỏ</button>
+        </form>
+    </div>
+    <div class="product">
+        <span>Sản phẩm C</span>
+        <form action="cart.php" method="POST">
+            <input type="hidden" name="product_id" value="3">
+            <input type="hidden" name="product_name" value="Sản phẩm C">
+            <input type="hidden" name="product_price" value="300000">
+            <label for="quantity">Số lượng:</label>
+            <input type="number" name="quantity" value="1" min="1" required>
+            <button type="submit" name="add_to_cart">Thêm vào giỏ</button>
+        </form>
+    </div>
+</div>
 
-// Route
-$act = $_GET['act'] ?? '/';
+<a href="cart.php">Đi đến giỏ hàng</a>
 
-// var_dump($_GET['act']);die();
-
-// if ($_GET['act']) {
-//     $act = $_GET['act'];
-// }else {
-//     $act = '/';
-// }
-
-// Để bảo bảo tính chất chỉ gọi 1 hàm Controller để xử lý request thì mình sử dụng match
-
-match ($act) {
-    // Trang chủ
-    '/' => (new HomeController())->home(),//truong hop dac biet
-
-    'trangchu' => (new HomeController())->trangchu(),
-    // BASE_URL/?act=trangchu
-    
-    'danhsachsanpham' => (new HomeController())->danhSachSanPham(),
-    // BASE_URL/?act=danhsachsanpham
-
-}; 
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.product-list, .cart {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.product {
+    margin-bottom: 15px;
+}
+
+.product button {
+    margin-left: 10px;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart table, .cart th, .cart td {
+    border: 1px solid #ddd;
+}
+
+.cart th, .cart td {
+    padding: 10px;
+    text-align: left;
+}
+
+.cart input[type="number"] {
+    width: 50px;
+}
+
+.cart a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-left: 10px;
+}
