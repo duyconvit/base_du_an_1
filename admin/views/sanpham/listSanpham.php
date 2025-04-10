@@ -59,7 +59,7 @@
                       <td><?= $sanPham['gia_san_pham'] ?></td>
                       <td><?= $sanPham['so_luong'] ?></td>
                       <td><?= $sanPham['ten_danh_muc'] ?></td>
-                      <td><?= $sanPham['trang_thai'] == 1 ? 'Còn bán':'Dừng bán'; ?></td>
+                      <td><?= $sanPham['trang_thai'] == 1 ? 'Còn hàng':'Hết hàng'; ?></td>
                       <td>
                         <div class="btn-group">
                           <a href="<?= BASE_URL_ADMIN . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>">
@@ -78,7 +78,7 @@
                     </tr>
                   <?php endforeach ?>
                 </tbody>
-                <tfoot>
+                <!-- <tfoot>
                   <tr>
                     <th>STT</th>
                     <th>Tên sản phẩm</th>
@@ -89,7 +89,7 @@
                     <th>Trạng thái</th>
                     <th>Thao tác</th>
                   </tr>
-                </tfoot>
+                </tfoot> -->
               </table>
             </div>
             <!-- /.card-body -->

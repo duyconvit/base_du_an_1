@@ -65,11 +65,6 @@
                                 </div>
 
                                 <div class="form-group col-6">
-                                    <label>Album ảnh</label>
-                                    <input type="file" class="form-control" name="img_array[]" multiple>
-                                </div>
-
-                                <div class="form-group col-6">
                                     <label>Số lượng</label>
                                     <input type="number" class="form-control" name="so_luong" placeholder="Nhập Số lượng">
                                     <?php if (isset($_SESSION['error']['so_luong'])) { ?>
@@ -103,9 +98,9 @@
                                     <label>Trạng thái</label>
                                     <select class="form-control" name="trang_thai" id="exampleFormControlSelect1">
 
-                                        <option selected disabled>Chọn danh mục sản phẩm</option>
-                                        <option value="1">Còn bán</option>
-                                        <option value="2">Dừng bán</option>
+                                        <option selected disabled>Chọn danh trạng thái</option>
+                                        <option value="1">Còn hàng</option>
+                                        <option value="2">Hết hàng</option>
 
                                         
                                     </select>
@@ -117,10 +112,6 @@
                                     <label>Mô tả</label>
                                     <textarea name="mo_ta" id="" class="form-control" placeholder="Nhập mô tả"></textarea>
                                 </div>
-
-                                
-
-                                
                             </div>
 
                             <div class="card-footer">

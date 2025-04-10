@@ -47,13 +47,15 @@
                         <!-- mini cart area start -->
                         <div class="col-lg-4">
                             <div class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end">
-                                <div class="header-search-container">
-                                    <button class="search-trigger d-xl-none d-lg-block"><i class="pe-7s-search"></i></button>
-                                    <form class="header-search-box d-lg-none d-xl-block">
-                                        <input type="text" placeholder="Nhập tên sản phẩm" class="header-search-field">
-                                        <button class="header-search-btn"><i class="pe-7s-search"></i></button>
+                            <div class="header-search-container">
+                                    <form action="" method="GET" class="d-flex">
+                                        <input type="text" name="keyword" class="form-control"
+                                            value="<?= isset($_GET['keyword']) ? htmlspecialchars($_GET['keyword']) : '' ?>"
+                                            placeholder="Tìm kiếm sản phẩm..." required>
+                                        <button type="submit" class="btn btn-primary ms-2">Tìm</button>
                                     </form>
                                 </div>
+
                                 <div class="header-configure-area">
                                     <ul class="nav justify-content-end">
                                         <li class="user-hover">
@@ -61,7 +63,7 @@
                                                 <i class="pe-7s-user"></i>
                                             </a>
                                             <ul class="dropdown-list">  
-                                                <li><a href="http://localhost/X/base_du_an_1/views/layout/formLogin.php"> Đăng nhập </a></li>
+                                                <li><a href="http://localhost/base_du_an_1/views/layout/formLogin.php"> Đăng nhập </a></li>
                                                 <li><a href="login-register.html">Đăng ký</a></li>
                                                 <li><a href="my-account.html">Tài Khoản</a></li>
                                             </ul>
@@ -84,61 +86,5 @@
             <!-- header middle area end -->
         </div>
         <!-- main header start -->
-
-        <!-- mobile header start -->
-        <!-- mobile header start -->
-        <div class="mobile-header d-lg-none d-md-block sticky">
-            <!--mobile header top start -->
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <div class="mobile-main-header">
-                            <div class="mobile-logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
-                                </a>
-                            </div>
-                            <div class="mobile-menu-toggler">
-                                <div class="mini-cart-wrap">
-                                    <a href="cart.html">
-                                        <i class="pe-7s-shopbag"></i>
-                                        <div class="notification">0</div>
-                                    </a>
-                                </div>
-                                <button class="mobile-menu-btn">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- mobile header top start -->
-        </div>
-        <!-- mobile header end -->
-        <!-- mobile header end -->
-
-        <!-- offcanvas mobile menu start -->
-        <!-- off-canvas menu start -->
-        <aside class="off-canvas-wrapper">
-            <div class="off-canvas-overlay"></div>
-            <div class="off-canvas-inner-content">
-                <div class="btn-close-off-canvas">
-                    <i class="pe-7s-close"></i>
-                </div>
-
-                <div class="off-canvas-inner">
-                    <!-- search box start -->
-                    <div class="search-box-offcanvas">
-                        <form>
-                            <input type="text" placeholder="Search Here...">
-                            <button class="search-btn"><i class="pe-7s-search"></i></button>
-                        </form>
-                    </div>
-                    <!-- search box end -->
-
-
     </header>
     <!-- end Header Area -->

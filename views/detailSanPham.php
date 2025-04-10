@@ -38,33 +38,11 @@
                     <div class="product-details-inner">
                         <div class="row">
                             <div class="col-lg-5">
-                                <div class="product-large-slider">
-                                    <?php foreach ($listSanPham as $key => $sanPham): ?>
-                                        <div class="pro-large-img img-zoom">
+                                <div class="product-large-slider">             
                                             <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id']; ?>">
                                                 <img class="pri-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
-                                                <img class="sec-img" src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="product">
                                             </a>
-                                        </div>
-                                    <?php endforeach; ?>
                                 </div>
-                                <!-- <div class="pro-nav slick-row-10 slick-arrow-style">
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
-                                        </div>
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
-                                        </div>
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/product/product-details-img3.jpg" alt="product-details" />
-                                        </div>
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/product/product-details-img4.jpg" alt="product-details" />
-                                        </div>
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/product/product-details-img5.jpg" alt="product-details" />
-                                        </div>
-                                    </div> -->
                             </div>
                             <div class="col-lg-7">
                                 <div class="product-details-des">
@@ -84,7 +62,7 @@
                                     </div>
                                     <div class="availability">
                                         <i class="fa fa-check-circle"></i>
-                                        <span><?= $sanPham['so_luong'] . '_san pham trong kho' ?></span>
+                                        <span><?= $sanPham['so_luong'] . '_sản phẩm trong kho' ?></span>
                                     </div>
                                     <p class="pro-desc"><?= $sanPham['mo_ta'] ?></p>
                                     <div class="quantity-cart-box d-flex align-items-center">
@@ -96,43 +74,10 @@
                                         <div class="action_link">
                                             <a class="btn btn-cart2" href="#">Thêm giỏ hàng</a>
                                         </div>
-                                    </div>
-                                    <div class="pro-size">
-                                        <h6 class="option-title">Dung lượng :</h6>
-                                        <select class="nice-select">
-                                            <option>128</option>
-                                            <option>256</option>
-                                            <option>512</option>
-                                            <option>1T</option>
-                                        </select>
-                                    </div>
-                                    <div class="color-option">
-                                        <h6 class="option-title">color :</h6>
-                                        <ul class="color-categories">
-                                            <li>
-                                                <a class="c-lightblue" href="#" title="LightSteelblue"></a>
-                                            </li>
-                                            <li>
-                                                <a class="c-darktan" href="#" title="Darktan"></a>
-                                            </li>
-                                            <li>
-                                                <a class="c-grey" href="#" title="Grey"></a>
-                                            </li>
-                                            <li>
-                                                <a class="c-brown" href="#" title="Brown"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- product details inner end -->
-
-                    <!-- product details reviews start -->
-
-                    <!-- product details reviews end -->
                 </div>
                 <!-- product details wrapper end -->
             </div>
@@ -173,7 +118,7 @@
                                         if ($tinhNgay->days <= 7) {
                                         ?>
                                             <div class="product-label new">
-                                                <span>new</span>
+                                                <span>New</span>
                                             </div>
                                         <?php
                                         }
